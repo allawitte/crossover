@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <h4 class="text-center">{{video.name}}</h4>
+            <video ng-src="{{video.url}}" controls class="video-details"></video>
+            <div rating></div>
+            <p class="full-description">{{video.description}}</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div ng-repeat="video in vm.videos">
+                <h6 class="text-center"><a ui-sref="/home.video({videoId : video._id, sessionId: vm.sessionId})">{{video.name}}</a>
+                </h6>
+                <video ng-src="{{video.url}}" data-id="{{video._id}}" class="video-single-item"></video>
+                <div rating></div>
+                <p class="description">{{video.description}}</p>
+            </div>
+            <div preloader class="preloader-1">
+            </div>
+        </div>
+    </div>
+</div>

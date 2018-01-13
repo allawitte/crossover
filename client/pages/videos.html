@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-sm-12 col-md-6 p-1" ng-repeat="video in vm.videos">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center video-header mb-2"><a ui-sref="/home.video({videoId : video._id, sessionId: vm.sessionId})">{{video.name}}</a> </div>
+                    <div class="video-block">
+                        <video ng-src="{{video.url}}" data-id="{{video._id}}" controls class="video-item"></video>
+                        <span class="play" ng-click="vm.play(video._id)"></span>
+                    </div>
+                   <div rating></div>
+                    <p class="description">{{video.description}}</p>
+                </div>
+            </div>
+
+        </div>
+        <div preloader class="preloader-1">
+        </div>
+    </div>
+</div>

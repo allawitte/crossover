@@ -1,0 +1,243 @@
+body {
+    font-family: 'EB Garamond', serif;
+}
+
+h1, h2, h3, h4, h5, h6, .video-header {
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+    font-family: 'Oswald', sans-serif;
+}
+h5:hover a, h6:hover a, .video-header:hover a{
+    color: #17a2b8;
+}
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+h6 {
+    text-align: center;
+}
+
+nav.navbar{
+    padding: 0 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.nav-item {
+    padding: 7px 0;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+.nav-item:hover .nav-link{
+    color: #FFFFFF;
+}
+.nav-link {
+    cursor: pointer;
+}
+.card {
+    background: #fefefe;
+    height: 100%;
+}
+
+
+.video-item {
+    width: 100%;
+}
+
+.video-single-item {
+    display: block;
+    width: 100%;
+}
+
+.video-details {
+    display: block;
+    margin: 0 auto;
+}
+
+.video-block {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.video-header {
+    font-size:1.1rem;
+    line-height: 1.1;
+}
+
+.description {
+    height: 72px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.play {
+    display: block;
+    width: 50px;
+    height: 50px;
+    bottom: 6px;
+    position: absolute;
+}
+
+
+/*patch for bootstrap 4 */
+@media (max-width: 576px) {
+    .col-sm-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
+
+.preloader-1 {
+    margin: 20px auto;
+    width: 66px;
+    height: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+
+.preloader-1 .line {
+    width: 1px;
+    height: 12px;
+    background: #000;
+    margin: 0 1px;
+    display: inline-block;
+    animation: opacity-1 1000ms infinite ease-in-out;
+}
+
+
+
+.preloader-1 .line-1, .preloader-2 .line-1 { animation-delay: 800ms; }
+.preloader-1 .line-2, .preloader-2 .line-2 { animation-delay: 600ms; }
+.preloader-1 .line-3, .preloader-2 .line-3 { animation-delay: 400ms; }
+.preloader-1 .line-4, .preloader-2 .line-4 { animation-delay: 200ms; }
+.preloader-1 .line-6, .preloader-2 .line-6 { animation-delay: 200ms; }
+.preloader-1 .line-7, .preloader-2 .line-7 { animation-delay: 400ms; }
+.preloader-1 .line-8, .preloader-2 .line-8 { animation-delay: 600ms; }
+.preloader-1 .line-9, .preloader-2 .line-9 { animation-delay: 800ms; }
+
+@keyframes opacity-1 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.rating-box {
+    width: 200px;
+    padding: 5px 0;
+}
+
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.rating {
+    position: relative;
+    width: 80px;
+    height: 14px;
+    margin: 10px 0;
+    list-style: none;
+    background: url(../img/rating-star.png);
+}
+
+.rating:hover li.current {
+    width: 0 !important;
+}
+
+.rating li {
+    float: left;
+    height: 14px;
+}
+
+.rating li.current {
+    z-index: 1;
+    background: url(../img/rating-star.png) left bottom;
+}
+
+.rating li span[class*="star"] {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    width: 17px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.rating li span[class*="star"]:hover {
+    left: 0;
+    z-index: 2;
+    background: url(../img/rating-star.png) left bottom;
+}
+
+.rating li span.star1 {
+    left: 0;
+}
+
+.rating li span.star1:hover {
+    width: 17px;
+}
+
+.rating li span.star2 {
+    left: 17px;
+}
+
+.rating li span.star2:hover {
+    width: 34px;
+}
+
+.rating li span.star3 {
+    left: 34px;
+}
+
+.rating li span.star3:hover {
+    width: 51px;
+}
+
+.rating li span.star4 {
+    left: 51px;
+}
+
+.rating li span.star4:hover {
+    width: 68px;
+}
+
+.rating li span.star5 {
+    left: 68px;
+}
+
+.rating li span.star5:hover {
+    width: 85px;
+}
